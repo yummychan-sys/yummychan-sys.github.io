@@ -48,15 +48,6 @@
 	  		margin: 0;
 	  		padding: 0;
 	  	}
-	  	.cc{
-	  		position: fixed;
-	  		color: #FFFFFF30;
-	  		z-index: 10;
-	  		top: 0;
-	  		right: 0;
-	  		font-size: 10pt;
-	  		font-weight: lighter;
-	  	}
 	  	img{
 			width: 100vw;
 			height: 100vh;
@@ -496,8 +487,6 @@
 	  		function init(){
 	  			startTime();
 	  			stopOpening();
-	  			add='<div class="cc">copyright Andika Sujanadi @2020</div>';
-	  			$('body').append(add);
 	  			if(localStorage.getItem("nama") != null && localStorage.getItem("checked") == "yoi"){
 		  			namaku=localStorage.getItem("nama");
 		  			myclock();
@@ -800,11 +789,6 @@
 					if(h>18)     document.querySelector('img').src="wp1.PNG";
 					else if(h>4) document.querySelector('img').src="wp2.PNG";
 					else         document.querySelector('img').src="wp1.PNG";
-				}
-				if(window.btoa($('.cc').text())!='Y29weXJpZ2h0IEFuZGlrYSBTdWphbmFkaSBAMjAyMA=='){
-					if(jalan) $('.container').remove();
-					if(jalan) $('img').remove();
-					jalan=true;
 				}
 			}
 			function tulis(waktu,ucapan){
